@@ -86,8 +86,9 @@ module RubyXL
     def num_fmts_by_id
       
       return @num_fmts_hash unless @num_fmts_hash.nil?
-      if num_fmts
-        @num_fmts_hash={}
+      #if num_fmts
+      if not num_fmts[:numFmt].nil?
+          @num_fmts_hash={}
         num_fmts[:numFmt].each do |num_fmt|
           @num_fmts_hash[num_fmt[:attributes][:numFmtId]]=num_fmt
         end

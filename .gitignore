@@ -3,3 +3,5 @@
 *.gem
 *.swp
 lib/tests/
+
+lib/.DS_Store
