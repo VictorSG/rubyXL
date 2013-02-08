@@ -102,7 +102,7 @@ module RubyXL
     def change_fill(rgb='ffffff')
       validate_worksheet
       Color.validate_color(rgb)
-      @style_index = modify_fill(@workbook, @style_index,rgb)
+      @style_index = modify_fill(@workbook, '0',rgb)
     end
 
     # Changes font name of cell
