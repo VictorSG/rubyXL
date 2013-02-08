@@ -107,8 +107,6 @@ class Worksheet < PrivateClass
       @row_styles[(Integer(row)+1).to_s][:style] = '0'
     end
 
-    @row_styles[(Integer(row)+1).to_s][:style] = modify_fill(@workbook,Integer(@row_styles[(Integer(row)+1).to_s][:style]),rgb)
-
     @sheet_data[Integer(row)].each do |c|
       unless c.nil?
         c.change_fill(rgb)
